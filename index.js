@@ -23,10 +23,6 @@ var OWin = document.getElementById("OWin");
 var totalTie= document.getElementById("Tie");
 var totalPlay = document.getElementById("Total");
 
-
-
-
-
 //Sounds
 const gameOverSound=new Audio("sounds/sound_game_over.wav");
 const clickSound=new Audio("sounds/sound_tap.wav");
@@ -127,7 +123,7 @@ function gameOverScreen(winnerText) {
     O_WinCount++;
     totalRounds++;
     }
-    console.log(X_WinCount,O_WinCount,tieCount,totalRounds);
+    
     XWin.value=X_WinCount;
     OWin.value=O_WinCount;
     totalTie.value=tieCount;
