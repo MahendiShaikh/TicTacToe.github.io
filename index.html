@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
@@ -9,14 +9,15 @@
  </head>
  <body>
         <h1 id="playerText">Tic Tac Toe</h1>
+        
         <div id="gameboard">
-            <div data-index="1" class="box right-border bottom-border"></div>
-            <div data-index="2" class="box bottom-border right-border"></div>
-            <div data-index="3" class="box bottom-border"></div>
+            <div data-index="1" class="box right-border bottom-border" ></div>
+            <div data-index="2" class="box bottom-border right-border" ></div>
+            <div data-index="3" class="box bottom-border" name="btn3"></div>
             <div data-index="4" class="box right-border bottom-border"></div>
-            <div data-index="5" class="box right-border bottom-border"></div>
-            <div data-index="6" class="box bottom-border"></div>
-            <div data-index="7" class="box right-border "></div>
+            <div data-index="5" class="box right-border bottom-border" ></div>
+            <div data-index="6" class="box bottom-border" ></div>
+            <div data-index="7" class="box right-border " ></div>
             <div data-index="8" class="box right-border "></div>
             <div data-index="9" class="box"></div>
             <div id="strike" class="strike"></div>
@@ -24,6 +25,24 @@
         <div id="game-over-area" class="hidden">
             <h2 id="game-over-text">Winner is X</h2>
             <button id="play-again">Play Again</button>
+            <table>
+                <tr>
+                    <td>PlayerX</td> 
+                    <td><input type="text" id="XWin"></td>
+                </tr>
+                <tr>
+                    <td>PlayerO</td>
+                    <td><input type="text" id="OWin"></td>
+                </tr>
+                <tr>
+                    <td>Tie Count</td>
+                    <td><input type="text" id="Tie"></td>
+                </tr>
+                <tr>
+                    <td>Total Count</td>
+                    <td><input type="text" id="Total"></td>
+                </tr>
+            </table>
         </div>
     <script src="index.js"></script>
  </body>
