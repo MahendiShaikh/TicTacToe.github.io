@@ -2,6 +2,11 @@ const boxes=document.querySelectorAll(".box");
 const PLAYER_X="X";
 const PLAYER_O="O";
 let turn =PLAYER_X;
+let X_WinCount=0;
+let O_WinCount=0;
+let totalRounds=0;
+let tieCount=0;
+
 
 const boardState = Array(boxes.length);
 boardState.fill(null);
@@ -13,6 +18,14 @@ const gameOverArea=document.getElementById("game-over-area");
 const gameOverText=document.getElementById("game-over-text");
 const playAgain=document.getElementById("play-again");
 playAgain.addEventListener("click", startNewGame);
+var XWin = document.getElementById("XWin");
+var OWin = document.getElementById("OWin");
+var totalTie= document.getElementById("Tie");
+var totalPlay = document.getElementById("Total");
+
+
+
+
 
 //Sounds
 const gameOverSound=new Audio("sounds/sound_game_over.wav");
@@ -99,7 +112,29 @@ function gameOverScreen(winnerText) {
     gameOverArea.className = "visible";
     gameOverText.innerText = text;
     gameOverSound.play();
+
+    if (winnerText===null){
+        tieCount++;
+        totalRounds++;
+    }
+   
+    if (winnerText=== 'X'){
+    X_WinCount++;
+    totalRounds++;
+    }
+
+    if (winnerText=== 'O'){
+    O_WinCount++;
+    totalRounds++;
+    }
+    console.log(X_WinCount,O_WinCount,tieCount,totalRounds);
+    XWin.value=X_WinCount;
+    OWin.value=O_WinCount;
+    totalTie.value=tieCount;
+    totalPlay.value=totalRounds; 
   }
+
+gameOverScreen();
 
 function startNewGame(){
     strike.className="strike";
