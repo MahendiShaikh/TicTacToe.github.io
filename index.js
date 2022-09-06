@@ -130,8 +130,6 @@ function gameOverScreen(winnerText) {
     totalPlay.value=totalRounds; 
   }
 
-gameOverScreen();
-
 function startNewGame(){
     strike.className="strike";
     gameOverArea.className="hidden";
